@@ -32,15 +32,15 @@ var mountain = document.createElement("div");
 mountain.className = "mountain";
 view.appendChild(mountain);
 //--8.Create a div element with a class name of "top" and append it to the previously created "mountain" div from 
-var top = document.createElement("div");
-top.className = "top";
-mountainDiv.appendChild(top);
+var Top = document.createElement("div");
+Top.className = 'mountain-top';    
+mountain.appendChild(Top);
 
 //--9.do while, mountain cap
-var cap = 1;
+var cap = 0;
 do {
-    var cap = document.createElement("div");
-    cap.className = "mountain-cap-"+ cap;
-    top.appendChild(cap);
-    cap++;
-} while (cap < 4);
+    var mountainCap = document.createElement("div");
+    mountainCap.className = 'mountain-cap-' + (cap + 1);    
+    Top.appendChild(mountainCap);
+    cap ++;
+} while (cap <= 3);
